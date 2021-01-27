@@ -4,7 +4,8 @@ import Button from './components/Button';
 function App() {
   return (
     <Main className="App">
-      <Button>OK</Button>
+      <Button round>OK</Button>
+      <Button>Cancel</Button>
     </Main>
   );
 }

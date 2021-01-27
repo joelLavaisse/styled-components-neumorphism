@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 
+const mainSize = '3em'
+
 const Button = styled.button`
-  height: 3em;
-  width: 3em;
+  height: ${mainSize};
+  width: ${props => props.round && mainSize};
   font-weight: 600;
-  font-size: 16px;
-  border-radius: 50%;
+  font-size: 22px;
+  user-select: none;
+  border-radius: ${props => props.round ? '50%' : `calc(${mainSize} / 2)`};
+  padding: 0 ${props => !props.round && `calc(${mainSize} / 2)`};
   border: none;
   display: flex;
   flex-direction: column;
@@ -20,6 +24,7 @@ const Button = styled.button`
       box-shadow:
         6px 6px 12px 0 rgba(0, 0, 0, 0.25) inset,
         -6px -6px 12px 0 rgba(255, 255, 255, 0.025) inset;
+      color: #7e7f7a;
     }
 `;
 
